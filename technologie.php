@@ -15,7 +15,7 @@
 
     <body>
         <?php include_once("inc/header/header.php") ?>
-        </br></br>
+        </br></br> 
         <h1> technologies</h1>
         
         
