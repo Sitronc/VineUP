@@ -36,10 +36,7 @@
 
 	</div>
 
-	<footer>
-		
-
-	</footer>
+	<?php include_once("footer.php") ?>
 	 <script src="inc/js/app.js" charset="utf-8"></script>
 	</body>
 

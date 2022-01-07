@@ -11,9 +11,7 @@
             </div>
             <div class ="m-right">
             
-                <div class ="test">
-                <a href="#" class="m-link"> <i class="fas fa-home"></i>  Qui sommes nous? </a>
-</div>
+                
 
 
                         
@@ -37,7 +35,7 @@
                 
                 </div>
                 <div class ="test">
-                <a href="#" class="m-link"> <i class="fas fa-tractor"></i> Producteurs partenaires </a>
+                <a href="partenaire.php" class="m-link"> <i class="fas fa-tractor"></i> Producteurs partenaires </a>
                 </div>
                 <div class ="test">
                 <a href="#" class="m-link"> <i class="fas fa-tractor"></i> Données </a>

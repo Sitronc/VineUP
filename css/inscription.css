@@ -60,10 +60,23 @@ input[type=submit] {
     cursor: pointer;
     width: 100%;
 }
-input[type=submit]:hover {
+input[type=submit]:hover,.sub2:hover,.sub2>a:hover {
     background-color: white;
     color: #53af57;
     border: 1px solid #53af57;
+}
+
+.sub2{
+
+    background-color: #53af57;
+    color: white;
+    
+
+}
+
+.sub2>a{
+    text-decoration: none;
+    color: white;
 }
 
 footer{

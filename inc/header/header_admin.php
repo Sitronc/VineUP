@@ -6,9 +6,7 @@
             </div>
             <div class ="m-right">
             
-                <div class ="test">
-                <a href="#" class="m-link"> <i class="fas fa-home"></i>  Qui sommes nous? </a>
-</div>
+                
 
 
                         

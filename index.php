@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="inc/css/header.css" rel="stylesheet">
+    <link href="inc/css/footer.css" rel="stylesheet">
     <link href="inc/css/vine_up.css" rel="stylesheet">
      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,12 +15,16 @@
     </head>
 
     <body>
-    <?php include_once("inc/header/header.php") ?>
+        <?php include_once("inc/header/header.php") ?>
 
+        
+        <a href="https://translate.google.com/translate?langpair=fr%7Cen&sl=fr&tl=en&u=clarkaloph.com">Google Translate</a>
+        <?php
 
-        <footer>
-
-        </footer>
+        define('BONJOUR', 'Bojour');
+         echo BONJOUR;
+        ?>
+        <?php include_once("footer.php") ?>
         <script src="inc/js/app.js" charset="utf-8"></script>
     </body>
     

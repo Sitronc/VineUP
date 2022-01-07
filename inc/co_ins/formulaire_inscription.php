@@ -19,6 +19,6 @@
 				<input type="password" placeholder="Confirmer votre mot de passe" name="pass2">
 
 				<input type="submit" id='submit' value='Créer votre compte' >
-				<a href="connexion.php"> vous avez déjà un compte?</a>
+				<a href="connexion.php" class="sub2"> <div>vous avez déjà un compte?</div> </a>
 			</p>
 		</form>

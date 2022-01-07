@@ -9,7 +9,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
-<link rel="stylesheet" href="css/acceuil.css">
+
 <link href="inc/css/header.css" rel="stylesheet">
     <link href="inc/css/vine_up.css" rel="stylesheet">
 
@@ -34,10 +34,9 @@
 
 	</div>
 
-	<footer>
-		
+	<?php include_once("footer.php") ?>
 		<script src="inc/js/app.js" charset="utf-8"></script>
-	</footer>
+
 	
 	</body>
 
