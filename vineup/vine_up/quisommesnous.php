@@ -6,6 +6,7 @@
     
     <link href="inc/css/header.css" rel="stylesheet">
     <link href="inc/css/vine_up.css" rel="stylesheet">
+    <link href="inc/css/quisommesnous.css" rel="stylesheet">
      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -17,7 +18,13 @@
         <?php include_once("inc/header/header.php") ?>
 
         
+        <img src="inc/image/infinite_measures.png" class = "logo_I">
+        </br></br>
 
+        <div class="description_I">
+            description</br>
+            <a href="https://infinitemeasures.fr/vues/fr/index.php">infinite_measures</a>
+        </div>
 
         <footer>
 
