@@ -1,22 +1,3 @@
-nav.premier ul
-{
-	background: #328900;
-}
-nav.premier ul li.btn{
-
-	list-style-type: none ;	
-	display: inline-block;
-	padding: 10px;
-}
-
-nav.premier ul li.btn a{
-	text-decoration: none;
-	color: black;
-	background-color: #328900;
-}
-
-
-
 body{
     background: #67BE4B;
 }
@@ -50,6 +31,29 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
+
+
+input[type=href] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 88%;
+    text-align: center;
+}
+input[type=href]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+    cursor: pointer;
+}
+
+
+
+
+
 /* Set a style for all buttons */
 input[type=submit] {
     background-color: #53af57;
@@ -60,25 +64,9 @@ input[type=submit] {
     cursor: pointer;
     width: 100%;
 }
-input[type=submit]:hover,.sub2:hover,.sub2>a:hover {
+input[type=submit]:hover {
     background-color: white;
     color: #53af57;
     border: 1px solid #53af57;
 }
 
-.sub2{
-
-    background-color: #53af57;
-    color: white;
-    
-
-}
-
-.sub2>a{
-    text-decoration: none;
-    color: white;
-}
-
-footer{
-	background-color: black;
-}

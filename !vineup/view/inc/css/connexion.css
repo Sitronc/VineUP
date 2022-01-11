@@ -1,25 +1,24 @@
-nav.premier ul
-{
-	background: #328900;
-}
-nav.premier ul li.btn{
-
-	list-style-type: none ;	
-	display: inline-block;
-	padding: 10px;
-}
-
-nav.premier ul li.btn a{
-	text-decoration: none;
-	color: black;
-	background-color: #328900;
-}
-
-
-
 body{
     background: #67BE4B;
 }
+
+
+ul.yes{
+    margin-left: 3000px
+    width:100%;
+    padding: 300px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+}
+ul.yes:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+
+
 
 #container{
     width:350px;
@@ -57,7 +56,7 @@ input[type=submit] {
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    
+    cursor: pointer;
     width: 100%;
 }
 input[type=submit]:hover {
@@ -65,7 +64,27 @@ input[type=submit]:hover {
     color: #53af57;
     border: 1px solid #53af57;
 }
+input[type=href] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 88%;
+    text-align: center;
+}
+input[type=href]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+    cursor: pointer;
+}
+
+
+
+
 
 footer{
-	background-color: black;
+    background-color: black;
 }
