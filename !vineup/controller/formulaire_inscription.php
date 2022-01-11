@@ -1,6 +1,6 @@
 <form action="../controller/controleur_demande_inscription.php" method="post">
 	<p>
-
+		<h1> inscritpion</h1>
 		NOM:
 		<input type="text" placeholder="Entrer votre nom" name="nom" >	
 
@@ -9,9 +9,12 @@
 		
 		DATE DE NAISSANCE:
 		<input type="date" placeholder="Entrer votre prénom" name="date_naissance">
+		<br>
+		<br>
 
 		NUMERO DE TELEPHONE:
-		<input type="tel" name="tel"><br><br>	
+		<input type="tel" name="tel">
+		<br>	
 
 		ADRESSE MAIL:
 		<input type="text" placeholder="Entrer votre adresse mail" name="mail">
@@ -26,7 +29,9 @@
 		<input type="password" placeholder="Confirmer votre mot de passe" name="pass2">	
 
 		<input type="submit" id='submit' value='Créer votre compte'>
-		<a href="connexion.php" class="sub2"> <div>vous avez déjà un compte?</div> </a>
 
+		<a id="yes" href="connexion.php"> 
+					<input  type="href" value="vous avez un compte ?" >
+				</a>
 	</p>
 </form>
