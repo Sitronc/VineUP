@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;500;700;900&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato';
+    overflow-x: hidden;
+}
+
+.inner {
+    width: 90%;
+    margin: auto;
+}
+
+.imagevingnoble {
+    width: 100%;
+    height: 400px;
+    body {
+        margin: 0;
+    }
+}
+
+.introduction {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+    width: 40%;
+    display: block;
+}
