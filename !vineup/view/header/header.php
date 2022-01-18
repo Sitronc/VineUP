@@ -7,7 +7,7 @@
     <nav class = "menu" >
         <div class="inner">
             <div class="m-left">
-                <a href="../index.php"><img class="logo" src="inc/img/logo.png" alt="logo" title="logo"></a>
+                <a href="../index.php"><img class="logo" src="../inc/img/logo.png" alt="logo" title="logo"></a>
             </div>
             <div class ="m-right">
                 <div class ="test">
