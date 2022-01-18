@@ -5,14 +5,16 @@
         include("connect_bd.php");
 
         //requette
-        $reponse = $bdd->query('SELECT * FROM utilisateur WHERE mail="'.$mail.'" AND password="'.$password.'"');
+        $requser = $bdd-> prepare("SELECT * FROM utilisateur WHERE Mail = ? AND MDP = ?");
+        $requser->execute(array($mail, $password));
+        return $requser;
 
-        while ($donnees = $reponse->fetch())
+        /*while ($donnees = $reponse->fetch())
             {
                 $_SESSION["mail"] = $donnees["mail"];
                   return 1;
             }
-            $reponse->closeCursor();
+            $reponse->closeCursor();*/
     }
 
 
@@ -32,7 +34,7 @@
         }
     }
 
-    function inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance)
+    function inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance)//8
     {
         // connection à la base de donnée
         include("connect_bd.php");
@@ -42,8 +44,24 @@
         
         if($bdd)
         {
-            $reponse = "INSERT INTO utilisateur VALUES (NULL,'".$nom."', '".$prenom."', '".$pass."', '".$mail."', '".$type."', '".$adresse."', '".$tel."', '".$naissance."', NULL)";    
-            $bdd->exec($reponse);
+                    $query = $bdd->prepare
+                    ('INSERT INTO utilisateur (IdUtilisateur, Nom, Prenom, Naissance, MDP, Mail, TypeUser, Adresse, Tel, NomDomaine) 
+                    VALUES (:IdUtilisateur, :Nom, :Prenom, :Naissance, :MDP, :Mail, :TypeUser, :Adresse, :Tel, :NomDomaine)');
+                    $query->execute
+                    ([
+                        'IdUtilisateur' => NULL,
+                        'Nom' => $nom,
+                        'Prenom' => $prenom,
+                        'Naissance' => $naissance,
+                        'MDP' => $pass,
+                        'Mail' => $mail,
+                        'TypeUser' => 'client',
+                        'Adresse' => $adresse,
+                        'Tel' => $tel,
+                        'NomDomaine' => NULL
+                    ]);
+            // $reponse = "INSERT INTO utilisateur VALUES (NULL,'".$nom."', '".$prenom."', '".$pass."', '".$mail."', '".$type."', '".$adresse."', '".$tel."', '".$naissance."', NULL)";    
+            // $bdd->execute($reponse);
             if($bdd)
             {
                 return 1;
@@ -88,16 +106,15 @@
 
     }
 
-    function afficher_profil()
+    function afficher_profil($IdUtilisateur)
     {
         require("connect_bd.php");
             try {
-                    $pdo = getConnexion();
-                    $query = $pdo->prepare(
-                        'SELECT * FROM utilisateur'
+                    $query = $bdd->prepare(
+                        'SELECT * FROM utilisateur WHERE IdUtilisateur = "'.$IdUtilisateur.'"'
                     );
                     $query->execute();
-                    $userinfo = $query->fetchall();
+                    $userinfo = $query->fetch();
                     return $userinfo;
                 } catch (PDOException $e) {
                     $e->getMessage();
