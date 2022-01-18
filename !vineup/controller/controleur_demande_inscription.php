@@ -8,27 +8,32 @@
             //$_POST["pass"] = secur($_POST["pass"]);
 
             //inster into puis connection
-            $nom = $_POST["nom"];
-            $prenom = $_POST["prenom"];
-            $pass = $_POST["pass"];
-            $mail = $_POST["mail"];
-            $type = 'clients';
-            $adresse = $_POST['adresse'];
-            $tel = $_POST["tel"];
-            $naissance = $_POST["date_naissance"];
+                $nom = $_POST["nom"];
+                $prenom = $_POST["prenom"];
+                $naissance = $_POST["date_naissance"];
+                $mail = $_POST["mail"];
+                $pass = $_POST["pass"];
+                $adresse = $_POST["adresse"];
+                $tel = $_POST["tel"];
+                $type = 'clients';
+              
 
-            //inscription($nom, $prenom,$date_naissance, $mail,$pass,$type);
-            if (inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance))
-            {
-                $_SESSION["etat"] = 1;
-                header('Location: ../index.php'); 
-            }
-        }
+               if(empty($_POST['date_naissance']) || empty($_POST["nom"]) || empty($_POST["prenom"]) || empty($_POST["mail"]) || strlen($_POST["pass"])<2 )
+                    {
 
-        else
-        {
-            //afficher cet eamil est déja utilisé
-            echo 'utiliser';
+                        //inscription($nom, $prenom,$date_naissance, $mail,$pass,$type);
+                        $_SESSION["probleme"] = 1;
+                        echo"<script > <!--- alert('ton alerte'); ---> </script>"; 
+                        header('Location: ../view/inscription.php');                                           
+                                       
+                    }
+                    
+            
+                if (inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance))
+                    {
+                             $_SESSION["etat"] = 1;
+                            header('Location: ../index.php'); 
+                    }
         }
     }
 

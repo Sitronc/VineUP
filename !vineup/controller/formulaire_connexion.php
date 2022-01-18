@@ -1,15 +1,22 @@
     <form method="POST" action="../controller/controleur_demande_connexion.php">
-		Login : <input type="text" id="login" name="mail" value=""/>
-		Passe : <input type="password" id="passe" name="password" value=""/>
-			<?php 
-				if ($_SESSION['error'] == 1)
-					{
-			?>
+		<h1>Connexion</h1>
+				Login : <input type="text" id="login" name="mail" value=""/>
+				Mot de Passe : <input type="password" id="passe" name="password" value=""/>
+
+				<?php 
+					if ($_SESSION['error'] == 1)
+					{?>
 						<script>
-							alert("mail ou mdp incorrect");
+							alert("Email ou mdp incorrect");
 						</script>
-			<?php
+							<?php
 					}
-			?>
+				
+				?>
 				<input type="submit" value="Valider"/>
+				
+				<a id="yes" href="inscription.php"> 
+					<input  type="href" value="vous n'avez pas de compte?" >
+				</a>
+
 	</form>
