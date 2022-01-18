@@ -6,6 +6,8 @@
     
     <link href="inc/css/header.css" rel="stylesheet">
     <link href="inc/css/vine_up.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="inc/css/Profil.css">
+    <link rel="stylesheet" type="text/css" href="inc/css/Templates.css">
      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -16,12 +18,22 @@
     <body>
         <?php include_once("header/header.php") ?>
         </br></br>Page profile </br>
-        <a href="../controller/deconnection.php"> déconnexion </a>
-        <?php 
-        include_once('../model/model.php');
-        include_once("header/footer.php"); 
-        $prout = afficher_profil();
-        echo $prout; ?>
+        <div>
+            <?php 
+                include_once('../model/model.php');
+                include_once("header/footer.php"); 
+                $IdUtilisateur = session_id();
+                $UserInfo = afficher_profil($IdUtilisateur);
+                echo '<br>';
+                echo 'Votre Nom est: <b>'.$UserInfo['Nom'].'</b> <br>'; 
+                echo 'Votre Prénom est: <b>'.$UserInfo['Prenom'].'</b><br>';
+                echo 'Votre Adresse est: <b>'.$UserInfo['Adresse'].'</b><br>';
+                echo 'Votre Numéro de Téléphone est: <b>'.$UserInfo['Tel'].'</b><br>';
+            ?>
+        </div>
+        <div class = "deco">
+            <a href="../controller/deconnection.php" class="btn btn-primary my-2">Déconnexion</a>
+        </div>
         <script src="inc/js/app.js" charset="utf-8"></script>
     </body>
     

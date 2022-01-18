@@ -26,7 +26,7 @@
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/logo.png">
                 </div>
                 <div class="description">
                     </br>
@@ -40,7 +40,7 @@
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/logo.png">
                 </div>
                 <div class="description">
                     </br>
@@ -54,7 +54,7 @@
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/logo.png">
                 </div>
                 <div class="description">
                     </br>
@@ -68,7 +68,7 @@
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/logo.png">
                 </div>
                 <div class="description">
                     </br>
@@ -82,7 +82,7 @@
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/logo.png">
                 </div>
                 <div class="description">
                     </br>

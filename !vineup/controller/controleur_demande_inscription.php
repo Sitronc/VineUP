@@ -10,9 +10,11 @@
             //inster into puis connection
                 $nom = $_POST["nom"];
                 $prenom = $_POST["prenom"];
-                $date_naissance = $_POST["date_naissance"];
+                $naissance = $_POST["date_naissance"];
                 $mail = $_POST["mail"];
                 $pass = $_POST["pass"];
+                $adresse = $_POST["adresse"];
+                $tel = $_POST["tel"];
                 $type = 'clients';
               
 
@@ -27,7 +29,7 @@
                     }
                     
             
-                if (inscription($nom, $prenom,$date_naissance, $mail,$pass,$type))
+                if (inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance))
                     {
                              $_SESSION["etat"] = 1;
                             header('Location: ../index.php'); 
