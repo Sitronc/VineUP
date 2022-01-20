@@ -5,8 +5,11 @@
         include("connect_bd.php");
 
         //requette
-        $requser = $bdd-> prepare("SELECT * FROM utilisateur WHERE Mail = ? AND MDP = ?");
-        $requser->execute(array($mail, $password));
+        $requser = $bdd-> prepare('SELECT * FROM utilisateur WHERE Mail = "'.$mail.'" AND MDP = "'.$password.'"');
+        $requser->execute();
+        $userinfo = $requser->fetch();
+        return $userinfo;
+
         return $requser;
 
         /*while ($donnees = $reponse->fetch())
@@ -109,15 +112,57 @@
     function afficher_profil($IdUtilisateur)
     {
         require("connect_bd.php");
-            try {
-                    $query = $bdd->prepare(
-                        'SELECT * FROM utilisateur WHERE IdUtilisateur = "'.$IdUtilisateur.'"'
-                    );
-                    $query->execute();
-                    $userinfo = $query->fetch();
-                    return $userinfo;
-                } catch (PDOException $e) {
-                    $e->getMessage();
-                }
+        try {
+                $query = $bdd->prepare(
+                    'SELECT * FROM utilisateur WHERE IdUtilisateur = "'.$IdUtilisateur.'"'
+                );
+                $query->execute();
+                $userinfo = $query->fetch();
+                return $userinfo;
+            } 
+            catch (PDOException $e) 
+            {
+                $e->getMessage();
             }
+    }
+    function modif_profil($Nom, $Prenom, $Naissance, $MDP, $Mail, $Type, $Adresse, $Tel, $NomDomaine,  $IdUtilisateur)
+    {
+        require("connect_bd.php");
+        try 
+            {
+                $query = $bdd->prepare
+                (
+                    'UPDATE utilisateur SET IdUtilisateur = "'.$IdUtilisateur.'", 
+                                            Nom = "'.$Nom.'", 
+                                            Prenom = "'.$Prenom.'", 
+                                            Naissance = "'.$Naissance.'", 
+                                            MDP = "'.$MDP.'", 
+                                            Mail = "'.$Mail.'", 
+                                            TypeUser = "'.$Type.'", 
+                                            Adresse = "'.$Adresse.'", 
+                                            Tel = "'.$Tel.'", 
+                                            NomDomaine = "'.$NomDomaine.'"  
+                                        WHERE IdUtilisateur = "'.$IdUtilisateur.'"'
+                );
+                $query->execute();
+                return $query;      
+            } 
+                catch (PDOException $e) 
+                    {
+                        $e->getMessage();
+                    }
+    }
+    function supprimer_compte($IdUtilisateur)
+    {
+        try 
+            {
+                require("connect_bd.php");
+                $query = $bdd->prepare('DELETE FROM utilisateur WHERE IdUtilisateur = "'.$IdUtilisateur.'"');
+                $query->execute();
+            } 
+            catch (PDOException $e) 
+            {
+                $e->getMessage();
+            }
+    }
 ?>
