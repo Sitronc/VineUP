@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 10 jan. 2022 à 23:53
--- Version du serveur : 10.4.21-MariaDB
--- Version de PHP : 8.0.11
+-- Généré le : jeu. 20 jan. 2022 à 16:02
+-- Version du serveur : 10.4.22-MariaDB
+-- Version de PHP : 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `mydb`
+-- Base de données : `vineup`
 --
 
 -- --------------------------------------------------------
@@ -66,6 +66,9 @@ CREATE TABLE `forum_utilisateur` (
 
 CREATE TABLE `utilisateur` (
   `IdUtilisateur` int(11) NOT NULL,
+  `Nom` varchar(50) NOT NULL,
+  `Prenom` varchar(50) NOT NULL,
+  `Naissance` date NOT NULL,
   `MDP` mediumtext NOT NULL,
   `Mail` mediumtext NOT NULL,
   `TypeUser` varchar(45) NOT NULL,
