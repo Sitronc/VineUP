@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
--- Hôte : 127.0.0.1
--- Généré le : jeu. 20 jan. 2022 à 16:02
--- Version du serveur : 10.4.22-MariaDB
--- Version de PHP : 8.1.1
+-- Client :  localhost
+-- Généré le :  Ven 21 Janvier 2022 à 13:48
+-- Version du serveur :  10.1.19-MariaDB
+-- Version de PHP :  7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -18,8 +17,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `vineup`
+-- Base de données :  `vineup`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Capteur`
+--
+
+CREATE TABLE `Capteur` (
+  `IdVin` varchar(50) NOT NULL,
+  `temps` varchar(50) NOT NULL,
+  `Gaz` varchar(50) NOT NULL,
+  `C02` varchar(50) NOT NULL,
+  `Humidite` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -28,8 +41,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `faq` (
-  `Question` mediumtext DEFAULT NULL,
-  `Reponse` mediumtext DEFAULT NULL
+  `Question` mediumtext,
+  `Reponse` mediumtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -41,10 +54,10 @@ CREATE TABLE `faq` (
 CREATE TABLE `forum` (
   `IdUtilisateur` int(11) NOT NULL,
   `Titre` mediumtext NOT NULL,
-  `TypeQuestion` mediumtext DEFAULT NULL,
-  `Reponse` mediumtext DEFAULT NULL,
-  `Utilite` mediumtext DEFAULT NULL,
-  `Etat` mediumtext DEFAULT NULL
+  `TypeQuestion` mediumtext,
+  `Reponse` mediumtext,
+  `Utilite` mediumtext,
+  `Etat` mediumtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -74,7 +87,7 @@ CREATE TABLE `utilisateur` (
   `TypeUser` varchar(45) NOT NULL,
   `Adresse` varchar(45) NOT NULL,
   `Tel` varchar(45) NOT NULL,
-  `NomDomaine` mediumtext DEFAULT NULL
+  `NomDomaine` mediumtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -88,13 +101,19 @@ CREATE TABLE `vin` (
   `Vignoble` varchar(45) DEFAULT NULL,
   `TypeVin` varchar(45) DEFAULT NULL,
   `Note` varchar(45) DEFAULT NULL,
-  `Commentaire` longtext DEFAULT NULL,
+  `Commentaire` longtext,
   `Utilisateur_IdUtilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Index pour les tables déchargées
+-- Index pour les tables exportées
 --
+
+--
+-- Index pour la table `Capteur`
+--
+ALTER TABLE `Capteur`
+  ADD PRIMARY KEY (`IdVin`);
 
 --
 -- Index pour la table `forum`
@@ -125,23 +144,21 @@ ALTER TABLE `vin`
   ADD KEY `fk_Vin_Utilisateur1_idx` (`Utilisateur_IdUtilisateur`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `IdUtilisateur` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `IdUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `vin`
 --
 ALTER TABLE `vin`
   MODIFY `IdVin` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- Contraintes pour les tables déchargées
+-- Contraintes pour les tables exportées
 --
 
 --
@@ -156,7 +173,6 @@ ALTER TABLE `forum_utilisateur`
 --
 ALTER TABLE `vin`
   ADD CONSTRAINT `fk_Vin_Utilisateur1` FOREIGN KEY (`Utilisateur_IdUtilisateur`) REFERENCES `utilisateur` (`IdUtilisateur`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
