@@ -16,11 +16,17 @@
         <img src="view/inc/img/vingnobleAccueil.jpeg" class="imagevingnoble"alt=""/>
         <p class="introduction"> <b>Bienvenu sur VineUp</b> </p>
         <div class=center>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jlOj2THP4xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7rDzVARM0-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
             <p>
 
         <script src="view/inc/js/app.js" charset="utf-8"></script>
+
+        <?php include_once("view/header/header_index.php") ?>
+        <footer>
+            <?php include_once("view/header/footer_index.php") ?>
+        </footer>
+        <script src="view/inc/js/app.js" charset="utf-8"></script>
     </body>
-    
+
 </html>
