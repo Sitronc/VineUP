@@ -28,8 +28,17 @@
 		CONFIRMER MOT DE PASSE :
 		<input type="password" placeholder="Confirmer votre mot de passe" name="pass2">	
 
+		
+		<?php 
+			if ($_SESSION['Type'] == 'admin') 
+			{
+				?>
+				Nom du domaine :
+				<input type="text" placeholder="Nom du domaine" name="NomDomaine">	
+				<?php
+			}
+				?>
 		<input type="submit" id='submit' value='Créer votre compte'>
-
 		<a id="yes" href="connexion.php"> 
 					<input  type="href" value="vous avez un compte ?" >
 				</a>

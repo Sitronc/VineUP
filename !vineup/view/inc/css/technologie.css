@@ -22,7 +22,7 @@ html, body
     flex-wrap: wrap;
 }
 
-.humidite{
+.divcapteur{
     width: 20%;
     border: 10px double black;
     flex: 1 1 auto;

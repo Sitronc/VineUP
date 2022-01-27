@@ -1,4 +1,17 @@
 <?php
+session_start();
+echo $_SESSION['Type'];
+    if ($_SESSION['Type'] == 'admin') 
+        {
+            $type = 'vigneron';
+            echo "string";
+            $NomDomaine = $_POST['NomDomaine'];
+        }
+    else
+        {
+            $type = 'clients';
+            $NomDomaine = null;
+        }
     if (isset($_POST)) 
     {
         include_once('../model/model.php');
@@ -15,8 +28,7 @@
                 $pass = $_POST["pass"];
                 $adresse = $_POST["adresse"];
                 $tel = $_POST["tel"];
-                $type = 'clients';
-              
+
 
                if(empty($_POST['date_naissance']) || empty($_POST["nom"]) || empty($_POST["prenom"]) || empty($_POST["mail"]) || strlen($_POST["pass"])<2 )
                     {
@@ -29,12 +41,14 @@
                     }
                     
             
-                if (inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance))
+                if (inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance, $NomDomaine))
                     {
                              $_SESSION["etat"] = 1;
                             header('Location: ../index.php'); 
                     }
         }
+
+              
     }
 
 ?>

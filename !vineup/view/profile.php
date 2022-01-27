@@ -25,21 +25,28 @@ $IdUtilisateur = session_id();
             <div class="donnees">
                 <?php 
                     include_once('../model/model.php');
-                    $mail = 'roffetsimon@gmail.com';
+                    /*$mail = 'roffetsimon@gmail.com';
                     $pass = 'Az';
-                    $Connexion = connexion($mail, $pass);
+                    $Connexion = connexion($mail, $pass);*/
                     $UserInfo = afficher_profil(session_id());
                     echo '<br>';
                     echo 'Votre Nom est: <b>'.$UserInfo['Nom'].'</b> <br>'; 
                     echo 'Votre Prénom est: <b>'.$UserInfo['Prenom'].'</b><br>';
                     echo 'Votre Adresse est: <b>'.$UserInfo['Adresse'].'</b><br>';
                     echo 'Votre Numéro de Téléphone est: <b>'.$UserInfo['Tel'].'</b><br>';
+                    echo 'Votre adresse mail est : <b>'.$UserInfo['Mail'].'</b><br>';
                 ?>
             </div>
             <div class = "deco">
                 <a href="../controller/deconnection.php" class="btn btn-primary my-2">Déconnexion</a>
                 <a href="form_modif_profil.php" class="btn btn-primary my-2">Modifier les données</a>
                 <a href="../controller/supprimerProfil.php" class="btn btn-primary my-2">Supprimer compte</a>
+                <?php
+                    if ($_SESSION['Type'] === 'admin') 
+                        {
+                            echo '<br><a href="ModifAdmin.php" class="btn btn-primary my-2">Administrer</a> <a href="inscription.php" class="btn btn-primary my-2">Créer vigneron</a>';
+                        }
+                ?>
             </div>
         </div>
         <?php include_once("header/footer.php");?> 

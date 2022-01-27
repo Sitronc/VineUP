@@ -28,8 +28,6 @@
 		
 		
 			<div id="container">
-		
-			
 				<p>
 			
 					<?php include_once ('../controller/controleur_formulaire_connexion.php');?>

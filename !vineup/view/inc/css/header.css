@@ -161,7 +161,7 @@ li {
   width: 100%;
   align-items: center;
   display: flex;
-  color: red;
+  color: blue;
   text-decoration: none;
 }
 /*nav > li:hover > a{

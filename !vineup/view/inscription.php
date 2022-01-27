@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start() 
+?>
 <html>
 
 	<head>
@@ -25,12 +28,15 @@
 	</header>
 	
 	<body>
+
 		
 		
 		<div id="container">
 		
 		
-		<?php include_once ('../controller/controleur_formulaire_inscription.php');?>
+		<?php 
+		echo $_SESSION['Type'];
+		include_once ('../controller/controleur_formulaire_inscription.php');?>
 
 	</div>
 

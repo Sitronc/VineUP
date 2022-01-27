@@ -19,11 +19,11 @@
         <h1> NOS TECHNOLOGIES</h1>
 
         <div class = "capteur">
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/CapteurHumidite.png">
                 </div>
                 <div class="description">
                     </br>
@@ -34,11 +34,11 @@
             </div>
         
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/CapteurGaz.png">
                 </div>
                 <div class="description">
                 </br>
@@ -48,11 +48,11 @@
                 </div>
             </div>
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.PNG">
+                    <img class ="img_capteur"src="inc/img/CapteurCO2.png">
                 </div>
                 <div class="description">
                 </br>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             
-            <div class="humidite" >
+            <!-- <div class="divcapteur" >
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
@@ -90,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
                     <b>HUMIDITE</b>
                     </br></br>
@@ -102,7 +102,7 @@
                     </br>   
                     Descrition du capteur
                 </div>
-            </div>
+            </div> -->
             
         </div>  
         

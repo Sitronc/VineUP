@@ -37,7 +37,7 @@
         }
     }
 
-    function inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance)//8
+    function inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance, $NomDomaine)//8
     {
         // connection à la base de donnée
         include("connect_bd.php");
@@ -58,10 +58,10 @@
                         'Naissance' => $naissance,
                         'MDP' => $pass,
                         'Mail' => $mail,
-                        'TypeUser' => 'client',
+                        'TypeUser' => $type,
                         'Adresse' => $adresse,
                         'Tel' => $tel,
-                        'NomDomaine' => NULL
+                        'NomDomaine' => $NomDomaine
                     ]);
             // $reponse = "INSERT INTO utilisateur VALUES (NULL,'".$nom."', '".$prenom."', '".$pass."', '".$mail."', '".$type."', '".$adresse."', '".$tel."', '".$naissance."', NULL)";    
             // $bdd->execute($reponse);
