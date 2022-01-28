@@ -1,0 +1,89 @@
+.fond{
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 1040px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.page_deroulante > a.menu:after{
+  content: '❯';
+  font-size: 15px;
+  margin-left: 50px;
+  border-radius: 50px;
+  background-color: white;
+  display: inline-block;
+}
+
+ul.sous-menu_faq {
+  margin-top: 40px;
+  width: 1000px;
+  text-align: left;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.derouler > li.page_deroulante > a.menu {
+  height: 100px;
+  padding-left: 20px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.derouler > li.page_deroulante:hover {
+  background-color: rgba(33, 105, 236, 0.3);
+}
+
+.derouler > li.page_deroulante:hover > a.menu {
+  color: white;
+}
+
+
+
+
+.menu-deroulant:hover > .sous-menu_faq {
+  animation: apparitionSousMenu 1s forwards;
+}
+
+
+
+ 
+  
+  
+   
+
+  @keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 3px solid black;
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+  100% {
+    max-height: 50em;
+    border-top: 3px solid black;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+}
+  
+
+  
+
+
+
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+.page_deroulante:hover > a:after{
+  animation: rotationFleche 0.4s linear forwards;
+
