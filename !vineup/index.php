@@ -17,7 +17,15 @@
         <div align="center">
             <h1> Bienvenue sur VineUp </h1>
             <div class=center >
-                <iframe width="560" height="315" align="middle" src="https://www.youtube.com/embed/7rDzVARM0-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HBdCfZeGhFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p class="text">
+                        Bienvenue sur notre site, nous avons la joie de vous accueillir parmis nous n'hésitez pas à vous créer un compte si ce n'est pas déjà fait. Vous aurez accès à plein d'avantages tels qu'une meilleur gestion de vos favories, pour mieux vous y retrouver parmis tous les vignerons disponible sur notre plateforme.
+                    </p>
+                </div>
+
             </div>
         </div>
         <?php include_once("view/header/header_index.php") ?>

@@ -22,11 +22,11 @@
 </br>
 
         <div class = "producteur">
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
-                    <b>HUMIDITE</b>
+                    <b>Domaine de la Ruissiere</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.png">
+                    <img  width = "200px" class ="img_capteur"src="inc/img/DomaineDeLaRuissiere.jpg">
                 </div>
                 <div class="description">
                     </br>
@@ -36,11 +36,11 @@
                 </div>
             </div>
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
-                    <b>HUMIDITE</b>
+                    <b>Domaine de la Montagne</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.png">
+                    <img class ="img_capteur"src="inc/img/DomaineDeLaMoatgne.jfif">
                 </div>
                 <div class="description">
                     </br>
@@ -50,11 +50,11 @@
                 </div>
             </div>
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
-                    <b>HUMIDITE</b>
+                    <b>Domaine d'alsace</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.png">
+                    <img class ="img_capteur"src="inc/img/DomainedAlsace.jpg">
                 </div>
                 <div class="description">
                     </br>
@@ -64,11 +64,11 @@
                 </div>
             </div>
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
-                    <b>HUMIDITE</b>
+                    <b>Domaine du taupe</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.png">
+                    <img class ="img_capteur"src="inc/img/DomaineTaupe.jfif">
                 </div>
                 <div class="description">
                     </br>
@@ -78,11 +78,11 @@
                 </div>
             </div>
 
-            <div class="humidite" >
+            <div class="divcapteur" >
                 <div class=titre>
-                    <b>HUMIDITE</b>
+                    <b>Domaine de la Varenne</b>
                     </br></br>
-                    <img class ="img_capteur"src="inc/img/logo.png">
+                    <img class ="img_capteur"src="inc/img/DomaineLaVarenne.jfif">
                 </div>
                 <div class="description">
                     </br>

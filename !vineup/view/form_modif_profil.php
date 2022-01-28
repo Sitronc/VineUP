@@ -8,14 +8,17 @@ $Donnees = afficher_profil($Id);
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="css/acceuil.css">
+	<link href="inc/css/header.css" rel="stylesheet">	
+	<link rel="stylesheet" type="text/css" href="inc/css/inscription.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Profil</title>
 </head>
-<body>
+<body id="container">
 	<form action="../controller/demande_modification.php" method="post">
 	<p>
-		<h1>Inscription</h1>
+		<h1>Modification</h1>
 		NOM:
 		<input type="text" placeholder="Entrer votre nom" name="nom" value='<?php echo $Donnees['Nom']; ?>'>
 		<br>
@@ -56,13 +59,10 @@ $Donnees = afficher_profil($Id);
 		<br>
 		<br>
 
-		<input type="submit" id='submit' value='Créer votre compte'>
+		<input type="submit" id='submit' value='Modifier votre compte'>
 		<br>
 		<br>
 
-		<a id="yes" href="connexion.php"> 
-			<input  type="href" value="vous avez un compte ?" >
-		</a>
 	</p>
 </form>
 </body>

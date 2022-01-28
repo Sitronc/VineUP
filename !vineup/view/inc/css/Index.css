@@ -19,3 +19,9 @@ h1
     height: 100%;
     width: 100%;
 }
+.text
+{
+    color: #16A29D;
+    font-size: 1.4rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
