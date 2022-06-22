@@ -1,8 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;500;700;900&display=swap');
 html, body
 {
     margin:0;
-    padding:0;
     font-family: 'Lato';
     overflow-x: hidden;
 }
@@ -16,12 +15,7 @@ html, body
 {
 	padding-top: 20px;
 }
-.button
-{
-	background-color: #12AB00;
-
-}
 .corps
 {
-    padding: 5%;
+    padding-left:5%;
 }

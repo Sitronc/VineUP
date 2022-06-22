@@ -11,13 +11,6 @@
         return $userinfo;
 
         return $requser;
-
-        /*while ($donnees = $reponse->fetch())
-            {
-                $_SESSION["mail"] = $donnees["mail"];
-                  return 1;
-            }
-            $reponse->closeCursor();*/
     }
 
 
@@ -37,7 +30,7 @@
         }
     }
 
-    function inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance, $NomDomaine)//8
+    function inscription($nom, $prenom, $pass, $mail, $type, $adresse, $tel, $naissance, $NomDomaine)
     {
         // connection à la base de donnée
         include("connect_bd.php");
@@ -165,7 +158,7 @@
                 $e->getMessage();
             }
     }
-    function recup_donnees()
+    function recup_donnees($i)
     {
         $ch = curl_init();
         curl_setopt($ch,CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService/?ACTION=GETLOG&TEAM=G6-E");
@@ -174,14 +167,23 @@
         $data = curl_exec($ch);
         curl_close($ch);
         $data_tab = str_split($data,33);
-        echo "Tabular Data:<br />";
-        for($i=0, $size=count($data_tab); $i<$size; $i++){
-        echo "Trame $i: $data_tab[$i]<br />";
-        $trame = $data_tab[1];
-        $t= substr($trame,0,1);
-        $o= substr($trame,1,4);
-        list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
-        echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
+        //echo "Tabular Data:<br />";
+        /*for($i=0, $size=count($data_tab); $i<$size; $i++)
+        {*/
+            //echo "Trame $i: $data_tab[$i]<br />";
+            $trame = $data_tab[1];
+            $t= substr($trame,0,1);
+            $o= substr($trame,1,4);
+            list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+            $v = hexdec($v);
+            echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
+        //}
     }
-}
+
+    function conversion_hex($chaine)
+    {
+        $valeurDecimal = hexdec($chaine);
+        return valeurDecimal;
+    }
+
 ?>
